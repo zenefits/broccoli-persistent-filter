@@ -114,7 +114,7 @@ Filter.prototype._handleFile = function(relativePath, srcDir, destDir, entry, ou
  @returns {String}
  */
 Filter.prototype.cacheKey = function() {
-  var nswPath = path.join(__dirname, '..', '..', 'npm-shrinkwrap.json');
+  var nswPath = path.join(__dirname, '..', '..', 'yarn.lock');
   if ( fs.existsSync(nswPath) ) {
     return md5Hex(fs.readFileSync(nswPath));
   }
